@@ -1,0 +1,29 @@
+{
+  "name": "osdi-crawler",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.6.0"
+  },
+  "description": "Crawl an OSDI-compliant system, starting at its AEP, and produce a list of which OSDI services it exposes.",
+  "main": "index.js",
+  "author": "Harpo Jaeger <harpo.jaeger@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon index.js --exec babel-node",
+    "devcrawl": "nodemon crawl.js --exec babel-node",
+    "build": "webpack --config ./webpack.config.js",
+    "postinstall": "yarn build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "nodemon": "^1.17.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  }
+}
