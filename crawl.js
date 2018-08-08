@@ -14,8 +14,7 @@ async function crawl(aep, token) {
         if (_links) {
           Object.entries(_links).forEach(([k, v]) => {
             if (map[k]) {
-              console.log('already visited', k)
-            } else if (!['data', 'self', 'curies'].includes(k)) {
+            } else if (!['data', 'self', 'curies', 'next'].includes(k)) {
               map[k] = v
               visit(v.href)
             }
@@ -29,12 +28,9 @@ async function crawl(aep, token) {
     }
   }
   const map = {}
-  var res = await visit(aep)
-  console.log(map)
-
+  await visit(aep)
+  return map
 }
-
-crawl(OSDI_API_AEP, OSDI_API_Token)
 
 module.exports = {
   crawl

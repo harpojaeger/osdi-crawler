@@ -1,0 +1,12 @@
+[
+  {
+    "name": "VAN",
+    "AEP": "https://osdi.ngpvan.com/api/v1/",
+    "OSDI-API-Token": "xxxxxx|1"
+  },
+  {
+    "name": "Action Network",
+    "AEP": "https://actionnetwork.org/api/v2/",
+    "OSDI-API-Token": "yyyyyyy"
+  }
+]
